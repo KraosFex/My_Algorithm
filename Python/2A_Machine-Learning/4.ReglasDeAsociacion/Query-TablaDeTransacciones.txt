@@ -1,0 +1,10 @@
+    SELECT 
+    T0.SalesOrderID AS Factura,
+    CONVERT(varchar,T1.OrderDate,105) AS Fecha,
+    T0.ProductID AS ProductID,
+    T2.Name AS Producto,
+    T0.OrderQty AS Cantidad,
+    T0.UnitPrice AS Precio
+    FROM sales.SalesOrderDetail T0
+    join sales.SalesOrderHeader T1 ON T0.SalesOrderID = T1.SalesOrderID
+    join Production.Product T2 ON T0.ProductID = T2.ProductID

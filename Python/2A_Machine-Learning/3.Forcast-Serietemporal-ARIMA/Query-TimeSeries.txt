@@ -1,0 +1,8 @@
+    SELECT 
+    CONCAT_WS('-',YEAR(T1.d_date), MONTH(T1.d_date)) AS AñoMes,
+    SUM(T0.ss_quantity * T0.ss_list_price) AS Ventas
+    FROM store_sales T0
+        join date_dim T1 ON T0.ss_sold_date_sk = T1.d_date_sk
+    WHERE CONCAT_WS('-',YEAR(T1.d_date), MONTH(T1.d_date)) <> '2005-12'
+    GROUP BY YEAR(T1.d_date), MONTH(T1.d_date) 
+    ORDER BY YEAR(T1.d_date), MONTH(T1.d_date) 

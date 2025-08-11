@@ -1,0 +1,15 @@
+    SELECT 
+    CASE WHEN T0.genero='femenino' THEN 1 
+    WHEN T0.genero='masculino' THEN 2 
+    ELSE 3 END as sexo, 
+    CASE WHEN T0.origen='udemy' THEN 1 
+    WHEN T0.origen='frogames' THEN 2 
+    WHEN T0.origen='crehana' THEN 3 
+    WHEN T0.origen='facebook' THEN 4 
+    WHEN T0.origen='web' THEN 5 
+    ELSE 6 END as source,
+    T0.edad,T1.corr as curso, 
+    CASE WHEN T0.tickmarks <7 THEN 'Detractor' 
+    WHEN T0.tickmarks >8 THEN 'Promotor' 
+    ELSE 'Pasivo' END as Clasificacion 
+    FROM `tb_nps` T0 JOIN curso_nps T1 on T0.producto = T1.idSELECT

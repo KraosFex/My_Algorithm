@@ -1,0 +1,12 @@
+{
+  "name": "mudule-01",
+  "version": "0.0.1",
+  "description": "This is my first module for NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Johan Ferreira  - KraosFex",
+  "license": "ISC"
+}

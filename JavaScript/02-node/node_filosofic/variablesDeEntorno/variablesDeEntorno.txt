@@ -1,0 +1,9 @@
+VARIABLES DE ENTORNO:
+Lo primero que debo recordae es que simpre debo trabajar con la consola de bash
+
+para hacer esto en node con powershell primero se debe definir la variable de entorno
+de la siguiente manera:
+ $env:NOMBRE="Carlos" <- siempre pegado
+
+Luego de esto ejecutas en archivo:
+node entorno.js

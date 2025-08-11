@@ -1,0 +1,10 @@
+    SELECT T0.pr_review_date AS FechaReview,
+    T0.pr_item_sk AS ProductID,
+    T0.pr_review_rating AS Calificacion,
+    T0.pr_review_content AS Review,
+    T0.pr_user_sk AS Usuario,
+    T1.i_category AS Categoria,
+    T1.i_product_name AS Producto,
+    T1.i_item_desc AS Descripcion,
+    T1.i_size AS tamaño 
+    FROM product_reviews T0 join item T1 ON T0.pr_item_sk = T1.i_item_sk

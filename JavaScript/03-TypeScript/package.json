@@ -1,0 +1,15 @@
+{
+  "name": "04-typescript",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "exp-05": "bun run src/staircase-05.ts,"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
+
